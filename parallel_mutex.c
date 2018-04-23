@@ -60,7 +60,7 @@ void * put_phase(void *arg) {
     // If there are k threads, thread i inserts
     //      (i, i), (i+k, i), (i+k*2)
     for (key = tid ; key < NUM_KEYS; key += num_threads) {
-        insert(keys[key], tid);
+        insert(key, tid);
     }
 
     pthread_exit(NULL);
